@@ -1,4 +1,3 @@
-#
 Summary:	Kexi MDB
 Summary(pl):	Kexi MDB
 Name:		keximdb
@@ -13,7 +12,6 @@ BuildRequires:	automake
 BuildRequires:	glib2-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	kexi-devel
-BuildRequires:	kexi
 BuildRequires:	pkgconfig
 Requires:	kexi
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,11 +21,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description -l pl
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q 
 
 %build
-
-%configure --with-kexidb-includes=%{_includedir}/kexidb \
+%configure \
+	--with-kexidb-includes=%{_includedir}/kexidb \
 	--with-kexidb-libraries=%{_libdir} \
 	--with-qt-libraries=%{_libdir} \
 	--without-arts \
@@ -50,14 +48,6 @@ install -d $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%pre
-
-%post
-
-%preun
-
-%postun
 
 %files
 %defattr(644,root,root,755)
