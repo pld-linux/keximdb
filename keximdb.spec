@@ -1,5 +1,6 @@
-Summary:	Kexi MDB
-Summary(pl):	Kexi MDB
+# TODO: rethink Name
+Summary:	Kexi MDB plugin
+Summary(pl):	Wtyczka MDB do Kexi
 Name:		keximdb
 Version:	0.9
 Release:	0.1
@@ -17,8 +18,10 @@ Requires:	kexi
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Kexi MDB plugin.
 
 %description -l pl
+Wtyczka MDB do Kexi.
 
 %prep
 %setup -q 
@@ -60,7 +63,3 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{_bindir}/*
 
 #%{_datadir}/%{name}
-
-# initscript and its config
-#%attr(754,root,root) /etc/rc.d/init.d/%{name}
-#%config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/%{name}
