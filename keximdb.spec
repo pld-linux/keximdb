@@ -3,7 +3,7 @@ Summary:	Kexi MDB plugin
 Summary(pl):	Wtyczka MDB do Kexi
 Name:		keximdb
 Version:	0.9
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Applications/Databases
 Source0:	http://sunsite.icm.edu.pl/pub/unix/kde/stable/apps/KDE3.x/database/%{name}-%{version}.tar.gz
@@ -54,7 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS CREDITS ChangeLog NEWS README THANKS TODO
+%doc AUTHORS ChangeLog README
+%{_libdir}/kde3/keximigrate_mdb.la
+%attr (755,root,root) %{_libdir}/kde3/keximigrate_mdb.so
+%{_datadir}/services/keximigrate_mdb.desktop
 
 # if _sysconfdir != /etc:
 #%%dir %{_sysconfdir}
