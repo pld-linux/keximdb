@@ -23,7 +23,7 @@ Kexi MDB plugin.
 Wtyczka MDB do Kexi.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 %configure \
@@ -32,7 +32,7 @@ Wtyczka MDB do Kexi.
 	--with-qt-libraries=%{_libdir} \
 	--without-arts \
 	--enable-debug
-	
+
 %{__make}
 
 %install
