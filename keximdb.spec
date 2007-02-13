@@ -1,6 +1,6 @@
 # TODO: rethink Name
 Summary:	Kexi MDB plugin
-Summary(pl.UTF-8):   Wtyczka MDB do Kexi
+Summary(pl.UTF-8):	Wtyczka MDB do Kexi
 Name:		keximdb
 Version:	0.9
 Release:	1
